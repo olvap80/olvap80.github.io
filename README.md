@@ -1,6 +1,6 @@
 # Start page for [https://github.com/olvap80](https://github.com/olvap80)
 
-## [InstantRTOS](https://github.com/olvap80/InstantRTOS) - headeronly mimimalistic real time OS and handy utilities without dependencies
+## [InstantRTOS](https://github.com/olvap80/InstantRTOS) - header-only mimimalistic real time OS and handy utilities without dependencies
 - Written in C++ 11, suitable to work even on small embedded platforms, like Arduino (yes Arduino actually uses C++! and yes, it it possible to write RTOS in C++)
 - No dependencies (even no standard headers needed) by default
 - Only standard C++ (does not depend on any platform specifics)
