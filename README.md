@@ -1,7 +1,7 @@
-# Start page for https://github.com/olvap80
+# Start page for [https://github.com/olvap80](https://github.com/olvap80)
 
-## https://github.com/olvap80/InstantRTOS - headeronly mimimalistic real time OS and handy utilities without dependencies
-- Whritten in C++ 11, suitable to work even on small embedded platforms, like Arduino (yes Arduino actually uses C++! and yes, it it possible to write RTOS in C++)
+## [InstantRTOS](https://github.com/olvap80/InstantRTOS) - headeronly mimimalistic real time OS and handy utilities without dependencies
+- Written in C++ 11, suitable to work even on small embedded platforms, like Arduino (yes Arduino actually uses C++! and yes, it it possible to write RTOS in C++)
 - No dependencies (even no standard headers needed) by default
 - Only standard C++ (does not depend on any platform specifics)
 - Each file contains usage sample, every API is documented with doxygen
@@ -32,5 +32,5 @@
 - InstantSignals.h (in progress) - Handle hardware signals being mapped to memory
 
 
-## https://github.com/olvap80/deferpp - Go-lang like DEFER construction for C++ (execute code on scope exit)
+## [deferpp](https://github.com/olvap80/deferpp) - Go-lang like DEFER construction for C++ (execute code on scope exit)
 [deferpp.h](https://github.com/olvap80/deferpp/blob/master/deferpp.h) Simple, lightweight, single header only, quick and portable Go-like DEFER construction for C++11 and above, implemented in standard C++11 (but without involving std::function and without any dependencies at all!).
