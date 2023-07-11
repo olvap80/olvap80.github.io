@@ -11,6 +11,8 @@ All the suff ready so far follows.
 - Easy to integrate with any platform (see samples in corresponding files!)
 - You can take away parts you need (like efficient Delegates and Coroutines) and use them separately without RTOS.
 
+On more details please see [here](https://olvap80.github.io/InstantRTOS/)
+
 ## Features
 ### General utility headers
 
