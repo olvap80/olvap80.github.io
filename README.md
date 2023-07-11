@@ -3,11 +3,13 @@ All the suff ready so far follows.
 
 # [InstantRTOS](https://github.com/olvap80/InstantRTOS) - header-only mimimalistic real time OS and handy utilities without dependencies
 ## Benefits
-- Written in C++ 11, suitable to work even on small embedded platforms, like Arduino (yes Arduino actually uses C++! and yes, it it possible to write RTOS in C++)
-- No dependencies (even no standard headers needed) by default
-- Only standard C++ (does not depend on any platform specifics)
-- Each file contains usage sample, every API is documented with doxygen
+- Written in C++ 11, suitable to work even on small embedded platforms, like Arduino (yes Arduino actually uses C++! and yes, it it possible to write RTOS in C++).
+- No dependencies (even no standard headers needed) by default.
+- Only standard C++ (does not depend on any platform specifics).
+- Dynamic memory is not required ("heavy" new/delete, malloc/free are not required).
+- Each file contains usage sample, every API is documented with doxygen.
 - Easy to integrate with any platform (see samples in corresponding files!)
+- You can take away parts you need (like efficient Delegates and Coroutines) and use them separately without RTOS.
 
 ## Features
 ### General utility headers
@@ -50,3 +52,4 @@ Usage:
     //      (one can reach scope end, issue return/break/continue or throw
     //       some exception, there is a guarantee such deferred code is called)
 ```
+On more detaild please see [here](https://github.com/olvap80/deferpp/edit/master/README.md).
