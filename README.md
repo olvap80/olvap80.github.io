@@ -1,7 +1,7 @@
 # Start page for [https://github.com/olvap80](https://github.com/olvap80)
 All the suff ready so far follows.
 
-# [InstantRTOS](https://github.com/olvap80/InstantRTOS) - header-only mimimalistic real time OS and handy utilities without dependencies
+# [InstantRTOS](https://github.com/olvap80/InstantRTOS) - header-only minimalistic real time OS and handy utilities without dependencies
 ## Benefits
 - Written in C++ 11, suitable to work even on small embedded platforms, like Arduino (yes Arduino actually uses C++! and yes, it it possible to write RTOS in C++).
 - No dependencies (even no standard headers needed) by default.
@@ -11,7 +11,7 @@ All the suff ready so far follows.
 - Easy to integrate with any platform (see samples in corresponding files!)
 - You can take away parts you need (like efficient Delegates and Coroutines) and use them separately without RTOS.
 
-On more details please see [here](https://olvap80.github.io/InstantRTOS/)
+On more details [please see here](https://olvap80.github.io/InstantRTOS/)
 
 ## Features
 ### General utility headers
@@ -54,4 +54,4 @@ Usage:
     //      (one can reach scope end, issue return/break/continue or throw
     //       some exception, there is a guarantee such deferred code is called)
 ```
-On more detaild please see [here](https://github.com/olvap80/deferpp/edit/master/README.md).
+On more detaild [please see here](https://github.com/olvap80/deferpp/edit/master/README.md).
