@@ -54,4 +54,4 @@ Usage:
     //      (one can reach scope end, issue return/break/continue or throw
     //       some exception, there is a guarantee such deferred code is called)
 ```
-On more details [please see here](https://github.com/olvap80/deferpp/edit/master/README.md).
+On more details [please see here](https://olvap80.github.io/deferpp/).
