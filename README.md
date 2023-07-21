@@ -3,31 +3,32 @@ All the stuff ready so far follows.
 
 # [InstantRTOS](https://github.com/olvap80/InstantRTOS) - C++ 11, header-only minimalistic real time OS and handy utilities without dependencies
 ## Motivation
-- RTOS to be quick to grasp
-- RTOS to get rid of typecasts  and avoid boilerplate around simple things
-- You do not pay for features you do not use (so suitable to work even on small embedded platforms, like Arduino, yep Arduino actually uses C++).
+- RTOS to be quick to grasp/
+- RTOS to get rid of typecasts and avoid boilerplate around simple things.
+- You do not pay for features you do not use (so InstantRTOS is suitable to work even on very small embedded platforms, like Arduino... yep Arduino actually uses C++).
 - Avoid third party dependencies
 - Avoid complex build (allow add RTOS features by just including headers)
-- Easy to configure (simple configuration rules on per file)
+- Easy to configure (simple configuration rules on per file basis)
 - Abstract out from platform specifics (so the same RTOS can run anywhere).
 - Avoid the need of dynamic memory allocation (no new/delete, malloc/free).
-- Make it easy to integrate with any platform!
+- Make it easy to integrate with any platform! Platform specifics are introduced only if they are used.
 
 ## Features
-- Lightweight and flexible scheduler operating on "callable things" can be runned on bare metal and even coexist with other RTOS (also you can have multiple schedulers)
-- Compact delegates are used to tie all "callable things" together, glue/configure all the stuff (and are better than std::function for space and speed)) 
-- Lightweight  stackless coroutines allow cooperative multitasking without burden of synchronization problems (they are also "callable things")
-- Deterministic memory management (block pools and controlled object lifetime)
-- Flexible options for timings
-- Other handy utility stuff
+- InstantRTOS is built around "callable things" (functors) concept.
+- Compact [delegates](https://github.com/olvap80/InstantRTOS/blob/main/InstantDelegate.h) are used to tie all "callable things" together, glue/configure all the stuff (and are better than std::function for space and speed))
+- Lightweight and flexible [scheduler](https://github.com/olvap80/InstantRTOS/blob/main/InstantScheduler.h) operates on "callable things". Scheduler is platform independent and can be runned anywhere, and even can coexist with other RTOS (also you can have multiple schedulers and invent your own strategies on how to distribute CPU time between them).
+- Lightweight stackless [coroutines](https://github.com/olvap80/InstantRTOS/blob/main/InstantCoroutine.h) allow cooperative multitasking without burden of synchronization problems (they are also "callable things").
+- Deterministic memory management ([block pools and controlled object lifetime](https://github.com/olvap80/InstantRTOS/blob/main/InstantMemory.h)).
+- Flexible options for [timings](https://github.com/olvap80/InstantRTOS#timing-intervals-and-scheduling).
+- Other handy [utility stuff](https://github.com/olvap80/InstantRTOS#other-handy-utility-stuff)
   
 On more details [please see here](https://olvap80.github.io/InstantRTOS/)
 
 
 # [deferpp](https://github.com/olvap80/deferpp) - Go-lang like DEFER construction for C++ (execute code on scope exit)
-[deferpp.h](https://github.com/olvap80/deferpp/blob/master/deferpp.h) - simple, lightweight, single header (header-only), quick and portable Go-like DEFER construction for C++11 and above, implemented in standard C++11 (but without involving std::function and without any dependencies at all!).
+[deferpp.h](https://github.com/olvap80/deferpp/blob/master/deferpp.h) - simple, lightweight, single header (header-only), quick and portable Go-like DEFER construction for C++11 and above, implemented in standard C++11 (but without involving "heavy" std::function and without any dependencies at all!). Get rid of manual RAII wrapper classes, DEFER makes it easy to manage resources! 
 
-Usage:
+Usage sample:
 ```cpp
     {
         auto resource = AcquireSomeResource(parameters_here)
