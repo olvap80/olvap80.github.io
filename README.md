@@ -26,7 +26,7 @@ On more details [please see here](https://olvap80.github.io/InstantRTOS/)
 
 
 # [deferpp](https://github.com/olvap80/deferpp) - Go-lang like DEFER construction for C++ (execute code on scope exit)
-[deferpp.h](https://github.com/olvap80/deferpp/blob/master/deferpp.h) - simple, lightweight, single header (header-only), quick and portable Go-like DEFER construction for C++11 and above, implemented in standard C++11 (but without involving "heavy" std::function and without any dependencies at all!). Get rid of manual RAII wrapper classes, DEFER makes it easy to manage resources! 
+[deferpp.h](https://github.com/olvap80/deferpp/blob/master/deferpp.h) - simple, lightweight, single header (header-only), quick and portable Go-like DEFER construction for C++11 and above, implemented in standard C++11 (but without involving "heavy" std::function and without any dependencies at all!). Get rid of manual RAII wrapper classes, golang-style "defer" in C++ makes it easy to manage resources! 
 
 Usage sample:
 ```cpp
