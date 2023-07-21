@@ -17,7 +17,7 @@ All the stuff ready so far follows.
 - InstantRTOS is built around "callable things" (functors) concept.
 - Compact [delegates](https://github.com/olvap80/InstantRTOS/blob/main/InstantDelegate.h) are used to tie all "callable things" together, glue/configure all the stuff (and are better than std::function for space and speed))
 - Lightweight and flexible [scheduler](https://github.com/olvap80/InstantRTOS/blob/main/InstantScheduler.h) operates on "callable things". Scheduler is platform independent and can be runned anywhere, and even can coexist with other RTOS (also you can have multiple schedulers and invent your own strategies on how to distribute CPU time between them).
-- Lightweight stackless [coroutines](https://github.com/olvap80/InstantRTOS/blob/main/InstantCoroutine.h) allow cooperative multitasking without burden of synchronization problems (they are also "callable things").
+- Lightweight stackless [coroutines](https://github.com/olvap80/InstantRTOS/blob/main/InstantCoroutine.h) are also "callable things" and allow cooperative multitasking without burden of synchronization problems.
 - Deterministic memory management ([block pools and controlled object lifetime](https://github.com/olvap80/InstantRTOS/blob/main/InstantMemory.h)).
 - Flexible options for [timings](https://github.com/olvap80/InstantRTOS#timing-intervals-and-scheduling).
 - Other handy [utility stuff](https://github.com/olvap80/InstantRTOS#other-handy-utility-stuff)
@@ -36,7 +36,7 @@ Usage sample:
         
         ... //work with that resource
     }
-    //Note: code after DEFER is called when leaving scope due to any reason
+    //Note: code block after DEFER is called once leaving scope due to any reason
     //      (one can reach scope end, issue return/break/continue or throw
     //       some exception, there is a guarantee such deferred code is called)
 ```
