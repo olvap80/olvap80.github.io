@@ -21,6 +21,7 @@ All the stuff ready so far follows.
 - Deterministic memory management ([block pools and controlled object lifetime](https://github.com/olvap80/InstantRTOS/blob/main/InstantMemory.h)).
 - Flexible options for [timings](https://github.com/olvap80/InstantRTOS#timing-intervals-and-scheduling).
 - Other handy [utility stuff](https://github.com/olvap80/InstantRTOS#other-handy-utility-stuff)
+- No "glabal state" at all, so that you can have multiple InstantRTOS shedulers in the same address space (and even run them in parallel) 
   
 On more details [please see here](https://olvap80.github.io/InstantRTOS/).
 
