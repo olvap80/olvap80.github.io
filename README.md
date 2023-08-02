@@ -7,11 +7,13 @@ All the stuff ready so far follows.
 - RTOS to get rid of all those typecasts and to avoid boilerplate around simple things.
 - You do not pay for those features you do not use (so InstantRTOS is suitable to work even on very small embedded platforms, like Arduino... yep Arduino actually uses C++).
 - Avoid third party dependencies.
-- Avoid complex build (allow add RTOS features by just including headers).
-- Easy to configure (simple configuration rules on per file basis).
-- Abstract out from platform specifics (so the same RTOS can run anywhere).
+- Avoid complex build (allow adding RTOS features by just including headers - natural modularity).
+- Easy to configure (simple configuration rules on per file basis), InstantRTOS is modular and allows developers to choose only the components they need for their application. 
+- Portability: abstract out from platform specifics (so the same lightweight RTOS can run anywhere, on various microcontrollers and microprocessors, with minimal or no changes to the application code).
+- Fast response: lightweight RTOS provides deterministic and predictable performance, ensuring that tasks meet their deadlines and events are handled promptly. 
 - Avoid the need of dynamic memory allocation (no new/delete, no malloc/free, you can use then if you like, but do not have to do this)).
-- Make it easy to integrate with any platform! Platform specifics are introduced only if they are really used.
+- Make it easy to integrate with any new platform! Platform specifics are introduced only if they are really used.
+- Small footprint: InstantRTOS occupies minimal memory space, both in terms of code size and data structures.
 
 ## Design features of InstantRTOS
 - InstantRTOS is built around "callable things" (functors) concept.
@@ -21,7 +23,7 @@ All the stuff ready so far follows.
 - Deterministic memory management ([block pools and controlled object lifetime](https://github.com/olvap80/InstantRTOS/blob/main/InstantMemory.h)).
 - Flexible options for [timings](https://github.com/olvap80/InstantRTOS#timing-intervals-and-scheduling).
 - Other handy [utility stuff](https://github.com/olvap80/InstantRTOS#other-handy-utility-stuff)
-- No "glabal state" at all, so that you can have multiple InstantRTOS shedulers in the same address space (and even run them in parallel) 
+- No "glabal state" at all, so that you can have multiple InstantRTOS shedulers in the same address space (and even run them in parallel and/or coexist with other RTOS) 
   
 On more details [please see here](https://olvap80.github.io/InstantRTOS/).
 
