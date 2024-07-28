@@ -17,10 +17,10 @@ All the stuff ready so far follows.
 
 ## Design features of InstantRTOS
 - InstantRTOS is built around "callable things" (functors) concept.
-- Compact [delegates](https://github.com/olvap80/InstantRTOS/blob/main/InstantDelegate.h) are used to tie all "callable things" together, glue/configure all the stuff (and are better than std::function by space and speed))
-- Lightweight and flexible [scheduler](https://github.com/olvap80/InstantRTOS/blob/main/InstantScheduler.h) operates on "callable things". Scheduler is platform independent and can be runned anywhere, and even can coexist with other RTOS (also you can have multiple schedulers and invent your own strategies on how to distribute CPU time between them).
-- Lightweight stackless [coroutines](https://github.com/olvap80/InstantRTOS/blob/main/InstantCoroutine.h) are also "callable things" and allow cooperative multitasking without the burden of synchronization problems.
-- Deterministic memory management ([block pools and controlled object lifetime](https://github.com/olvap80/InstantRTOS/blob/main/InstantMemory.h)).
+- Compact [delegates](https://github.com/olvap80/InstantRTOS/blob/main/src/InstantDelegate.h) are used to tie all "callable things" together, glue/configure all the stuff (and are better than std::function by space and speed))
+- Lightweight and flexible [scheduler](https://github.com/olvap80/InstantRTOS/blob/main/src/InstantScheduler.h) operates on "callable things". Scheduler is platform independent and can be runned anywhere, and even can coexist with other RTOS (also you can have multiple schedulers and invent your own strategies on how to distribute CPU time between them).
+- Lightweight stackless [coroutines](https://github.com/olvap80/InstantRTOS/blob/main/src/InstantCoroutine.h) are also "callable things" and allow cooperative multitasking without the burden of synchronization problems.
+- Deterministic memory management ([block pools and controlled object lifetime](https://github.com/olvap80/InstantRTOS/blob/main/src/InstantMemory.h)).
 - Flexible options for [timings](https://github.com/olvap80/InstantRTOS#timing-intervals-and-scheduling).
 - Other handy [utility stuff](https://github.com/olvap80/InstantRTOS#other-handy-utility-stuff)
 - No "glabal state" at all, so that you can have multiple InstantRTOS shedulers in the same address space (and even run them in parallel and/or coexist with other RTOS) 
